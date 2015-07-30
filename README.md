@@ -16,6 +16,8 @@ Procedure of Placing into App :
 
 var SilentYolocaust = require(dirname_to_silent_yolocaust); //change to actual directory
 
+This is not yet published to npmjs.org
+
 2.) Instantiate the react component in legal scopes with a UA property. Render it so it can start. It is also recommended to place it inside a variable,
 so that functions within the component can be used.
 
