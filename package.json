@@ -1,0 +1,25 @@
+{
+    "name" : "silent-yolocaust",
+    "version" : "0.0.1",
+    "description" : "Invisible Google Analytics React Component",
+    "main" : "index.js",
+    "repository" : {
+        "type" : "git",
+        "url" : "git://github.com/jekku/silent-yolocaust.git"
+    },
+    "keywords" : [
+        "Google",
+        "Analytics",
+        "React",
+        "Component"
+    ],
+    dependencies : {
+        "react" : "^0.13.2"
+    },
+    "author" : "Jekri Preclaro Orlina <jekri.orlina@any.tv> (http://github.com/jekku)",
+    "license" : "MIT",
+    "bugs" : {
+        "url" : "https://github.com/jekku/silent-yolocaust/issues"
+    },
+    "homepage" : "https://github.com/jekku/silent-yolocaust#readme"
+}
