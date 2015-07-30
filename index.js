@@ -51,16 +51,20 @@ SilentYolocaust = React.createClass({
         start();
     },
     render : function () {
-        var self = this;
-        if(_.has(self.props,'ua_tracking_code')){
-            GA.initialize();
-            ga('create',this.props.ua_tracking_code,'auto');
+        var self = this,
+
+        start = function () {
+            if(_.has(self.props,'ua_tracking_code')){
+                GA.initialize();
+                ga('create',this.props.ua_tracking_code,'auto');
+                return false;
+            }
+
+            console.err("No UA tracking code has been provided");
             return false;
         }
 
-        console.err("No UA tracking code has been provided");
-        return false;
-
+        start();
     }
 });
 
