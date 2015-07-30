@@ -6,7 +6,9 @@ var React = require('react'),
 
 SilentYolocaust = React.createClass({
     displayName : 'Silent Yolocaust',
-
+    handlePageView : function () {
+        
+    },
     render : function () {
 
         if(_.has(this.props,'ua_tracking_code')){
