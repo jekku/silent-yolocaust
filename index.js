@@ -30,7 +30,7 @@ var SilentYolocaust = React.createClass({
     },
     createTrackingEvent : function () {
         var start = function () {
-            return tracking_event
+            return tracking_event;
         },
         tracking_event = function (event_object) {
             ga('send',event_object);
@@ -40,7 +40,15 @@ var SilentYolocaust = React.createClass({
     },
     bindDown : function (element,event_listener,event_object) {
         var tracking_event = this.createTrackingEvent();
-        element.addEventListener(event_listener,tracking_event(event_object));
+        start = function () {
+            try {
+                element.addEventListener(event_listener,tracking_event(event_object));
+            }
+            catch (err) {
+                console.err(err);
+            }
+        }
+        start();
     },
     render : function () {
 
