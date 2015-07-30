@@ -2,9 +2,9 @@
 
 var React = require('react'),
     GA = require('./ga-tracking-code'),
-    _ = require('lodash');
+    _ = require('lodash'),
 
-var SilentYolocaust = React.createClass({
+SilentYolocaust = React.createClass({
     displayName : 'Silent Yolocaust',
     handlePageView : function (page, title) {
         var overrides,
