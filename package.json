@@ -14,7 +14,8 @@
         "Component"
     ],
     dependencies : {
-        "react" : "^0.13.2"
+        "react" : "^0.13.2",
+        "lodash" : "latest"
     },
     "author" : "Jekri Preclaro Orlina <jekri.orlina@any.tv> (http://github.com/jekku)",
     "license" : "MIT",
