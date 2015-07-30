@@ -1,10 +1,10 @@
 'use strict';
 
 var React = require('react'),
-    GA = require('ga-tracking-code'),
+    GA = require('./ga-tracking-code'),
     _ = require('lodash');
 
-SilentYolocaust = React.createClass({
+var SilentYolocaust = React.createClass({
     displayName : 'Silent Yolocaust',
     handlePageView : function (page, title) {
         var overrides,
