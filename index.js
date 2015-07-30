@@ -6,8 +6,22 @@ var React = require('react'),
 
 SilentYolocaust = React.createClass({
     displayName : 'Silent Yolocaust',
-    handlePageView : function () {
+    handlePageView : function (page, title) {
+        var overrides;
         
+        if( !(page || title) ) {
+            ga('send','pageview');
+            return;
+        }
+
+        if (page) {
+            overrides.page = page;
+        }
+        if (title) {
+            overrides.title = title;
+        }
+        
+        ga('send','pageview');
     },
     render : function () {
 
