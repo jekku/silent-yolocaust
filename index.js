@@ -7,21 +7,40 @@ var React = require('react'),
 SilentYolocaust = React.createClass({
     displayName : 'Silent Yolocaust',
     handlePageView : function (page, title) {
-        var overrides;
-        
-        if( !(page || title) ) {
-            ga('send','pageview');
-            return;
+        var overrides,
+
+        start = function () {
+            if( !(page || title) ) {
+                ga('send','pageview');
+                return;
+            }
+
+            if (page) {
+                overrides.page = page;
+            }
+            if (title) {
+                overrides.title = title;
+            }
+
+            ga('send','pageview',overrides);
         }
 
-        if (page) {
-            overrides.page = page;
+        start();
+
+    },
+    createTrackingEvent : function () {
+        var start = function () {
+            return tracking_event
+        },
+        tracking_event = function (event_object) {
+            ga('send',event_object);
         }
-        if (title) {
-            overrides.title = title;
-        }
-        
-        ga('send','pageview');
+
+        start();
+    },
+    bindDown : function (element,event_listener,event_object) {
+        var tracking_event = this.createTrackingEvent();
+        element.addEventListener(event_listener,tracking_event(event_object));
     },
     render : function () {
 
