@@ -13,7 +13,7 @@
         "React",
         "Component"
     ],
-    dependencies : {
+    "dependencies" : {
         "react" : "^0.13.2",
         "lodash" : "latest"
     },
