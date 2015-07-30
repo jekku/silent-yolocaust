@@ -51,8 +51,8 @@ SilentYolocaust = React.createClass({
         start();
     },
     render : function () {
-
-        if(_.has(this.props,'ua_tracking_code')){
+        var self = this;
+        if(_.has(self.props,'ua_tracking_code')){
             GA.initialize();
             ga('create',this.props.ua_tracking_code,'auto');
             return false;
