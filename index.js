@@ -7,7 +7,7 @@ var React = require('react'),
 SilentYolocaust = React.createClass({
     displayName : 'Silent Yolocaust',
     handlePageView : function (page, title) {
-        var overrides,
+        var overrides = {},
 
         start = function () {
             if( !(page || title) ) {
